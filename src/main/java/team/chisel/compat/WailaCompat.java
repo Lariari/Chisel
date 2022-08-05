@@ -32,7 +32,7 @@ public class WailaCompat implements IWailaDataProvider {
 
 	@Override
 	public List<String> getWailaBody(ItemStack stack, List<String> strings, IWailaDataAccessor accessor, IWailaConfigHandler configHandler) {
-		if (accessor.getBlock() instanceof ICarvable) {
+		if (1 = 0/*accessor.getBlock() instanceof ICarvable*/) { //Disables WAILA description tooltips
 			ICarvable block = (ICarvable) accessor.getBlock();
 			MovingObjectPosition pos = accessor.getPosition();
 			strings.add(block.getManager(accessor.getWorld(), pos.blockX, pos.blockY, pos.blockZ, accessor.getMetadata()).getDescription());
