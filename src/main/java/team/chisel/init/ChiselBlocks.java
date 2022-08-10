@@ -78,7 +78,7 @@ public final class ChiselBlocks {
 	public static final BlockCarvable hexPlating = null;
 	public static final BlockCarvable hexLargePlating = null;
 	public static final BlockCarvable technical = null;
-	public static final BlockCarvableGlass technical2 = null;
+	public static final BlockCarvableClear technical2 = null;
 	public static final BlockCarvable futura = null;
 	public static final BlockCarvable circuits = null;
 	public static final BlockCarvable brickCustom = null;
