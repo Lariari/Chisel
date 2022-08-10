@@ -1,24 +1,23 @@
 package team.chisel.block;
 
-import com.cricketcraft.chisel.api.ICarvable;
+//import com.cricketcraft.chisel.api.ICarvable;
 import com.cricketcraft.chisel.api.carving.CarvableHelper;
-import com.cricketcraft.chisel.api.carving.IVariationInfo;
+//import com.cricketcraft.chisel.api.carving.IVariationInfo;
 
 import team.chisel.Chisel;
 import team.chisel.entity.EntityChiselSnowman;
-import net.minecraft.block.Block;
 import net.minecraft.block.BlockPumpkin;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.entity.monster.EntityIronGolem;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.IIcon;
-import net.minecraft.world.IBlockAccess;
+//import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockCarvablePumpkin extends BlockPumpkin implements ICarvable {
+public class BlockCarvablePumpkin extends BlockPumpkin {
 
 	public CarvableHelper carverHelper;
 
@@ -29,7 +28,7 @@ public class BlockCarvablePumpkin extends BlockPumpkin implements ICarvable {
 
 	public BlockCarvablePumpkin(boolean isOn) {
 		super(isOn);
-		this.setStepSound(Block.soundTypeWood);
+		this.setHarvestLevel("axe", 0);
 		if (isOn)
 			setLightLevel(10.0F);
 		carverHelper = new CarvableHelper(this);
@@ -109,15 +108,15 @@ public class BlockCarvablePumpkin extends BlockPumpkin implements ICarvable {
 		this.blockIcon = icon.registerIcon(Chisel.MOD_ID + ":pumpkin/pumpkin_side");
 	}
 
-	@Override
-	public IVariationInfo getManager(IBlockAccess world, int x, int y, int z, int metadata) {
-		return carverHelper.getVariation(metadata);
-	}
+	//@Override
+	//public IVariationInfo getManager(IBlockAccess world, int x, int y, int z, int metadata) {
+	//	return carverHelper.getVariation(metadata);
+	//}
 
-	@Override
-	public IVariationInfo getManager(int meta) {
-		return carverHelper.getVariation(meta);
-	}
+	//@Override
+	//public IVariationInfo getManager(int meta) {
+	//	return carverHelper.getVariation(meta);
+	//}
 
 	public void setInformation(String textureLocation) {
 		this.faceLocation = textureLocation;

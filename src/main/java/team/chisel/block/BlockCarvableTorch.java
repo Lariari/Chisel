@@ -2,20 +2,20 @@ package team.chisel.block;
 
 import java.util.Random;
 
-import com.cricketcraft.chisel.api.ICarvable;
+//import com.cricketcraft.chisel.api.ICarvable;
 import com.cricketcraft.chisel.api.carving.CarvableHelper;
-import com.cricketcraft.chisel.api.carving.IVariationInfo;
+//import com.cricketcraft.chisel.api.carving.IVariationInfo;
 
 import team.chisel.Chisel;
 import com.cricketcraft.chisel.api.ChiselTabs;
 import net.minecraft.block.BlockTorch;
 import net.minecraft.client.renderer.texture.IIconRegister;
-import net.minecraft.world.IBlockAccess;
+//import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class BlockCarvableTorch extends BlockTorch implements ICarvable {
+public class BlockCarvableTorch extends BlockTorch {
 
 	public CarvableHelper carverHelper;
 	private String texLocation;
@@ -32,15 +32,15 @@ public class BlockCarvableTorch extends BlockTorch implements ICarvable {
 		this.texLocation = tex;
 	}
 
-	@Override
-	public IVariationInfo getManager(IBlockAccess world, int x, int y, int z, int metadata) {
-		return carverHelper.getVariation(metadata);
-	}
+	//@Override
+	//public IVariationInfo getManager(IBlockAccess world, int x, int y, int z, int metadata) {
+	//	return carverHelper.getVariation(metadata);
+	//}
 
-	@Override
-	public IVariationInfo getManager(int meta) {
-		return carverHelper.getVariation(meta);
-	}
+	//@Override
+	//public IVariationInfo getManager(int meta) {
+	//	return carverHelper.getVariation(meta);
+	//}
 
 	@Override
 	public void registerBlockIcons(IIconRegister icon) {

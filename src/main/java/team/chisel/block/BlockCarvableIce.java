@@ -24,6 +24,7 @@ public class BlockCarvableIce extends BlockIce implements ICarvable {
 
 	public BlockCarvableIce() {
 		super();
+		this.setHarvestLevel("pickaxe", 0);
 		carverHelper = new CarvableHelper(this);
 	}
 

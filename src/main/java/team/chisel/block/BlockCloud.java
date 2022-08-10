@@ -6,7 +6,7 @@ import team.chisel.config.Configurations;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.Entity;
-import net.minecraft.item.Item;
+//import net.minecraft.item.Item;
 import net.minecraft.util.AxisAlignedBB;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
@@ -17,6 +17,9 @@ public class BlockCloud extends BlockCarvable {
 
 	public BlockCloud() {
 		super(Material.ice);
+		this.setStepSound(soundTypeCloth);
+		this.setHardness(1.0F);
+		this.setResistance(1.0F);
 		useNeighborBrightness = true;
 	}
 
@@ -57,18 +60,18 @@ public class BlockCloud extends BlockCarvable {
 		return AxisAlignedBB.getBoundingBox(i + 0.2, j, k + 0.2, i + 0.8, j + 0.2, k + 0.8);
 	}
 
-	@Override
+	/*@Override
 	public Item getItemDropped(int par1, Random rand, int par3) {
 		return Item.getItemFromBlock(this);
-	}
+	}*/
 
 	@Override
 	public int quantityDropped(Random rand) {
-		return rand.nextInt(2);
+		return 0;
 	}
 
-	@Override
+	/*@Override
 	public int damageDropped(int meta) {
 		return meta;
-	}
+	}*/
 }

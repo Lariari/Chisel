@@ -9,25 +9,27 @@ import com.cricketcraft.chisel.api.carving.IVariationInfo;
 import com.cricketcraft.chisel.api.rendering.ClientUtils;
 
 import net.minecraft.block.Block;
-import net.minecraft.block.material.Material;
+import net.minecraft.block.BlockPackedIce;
+//import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IIconRegister;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.player.EntityPlayer;
-import net.minecraft.init.Blocks;
+//import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.stats.StatList;
 import net.minecraft.util.IIcon;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.World;
 
-public class BlockCarvablePackedIce extends Block implements ICarvable {
+public class BlockCarvablePackedIce extends BlockPackedIce implements ICarvable {
 
 	public CarvableHelper carverHelper;
 
 	public BlockCarvablePackedIce() {
-		super(Material.ice);
+		super();
+		this.setHarvestLevel("pickaxe", 0);
 		carverHelper = new CarvableHelper(this);
-		this.slipperiness = Blocks.packed_ice.slipperiness;
+		//this.slipperiness = Blocks.packed_ice.slipperiness;
 	}
 
 	@Override
