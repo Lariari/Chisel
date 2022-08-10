@@ -8,6 +8,8 @@ import mcp.mobius.waila.api.IWailaConfigHandler;
 import mcp.mobius.waila.api.IWailaDataAccessor;
 import mcp.mobius.waila.api.IWailaDataProvider;
 import mcp.mobius.waila.api.IWailaRegistrar;
+//import mcp.mobius.waila.utils.WailaExceptionHandler;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.player.EntityPlayerMP;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NBTTagCompound;
@@ -32,10 +34,15 @@ public class WailaCompat implements IWailaDataProvider {
 
 	@Override
 	public List<String> getWailaBody(ItemStack stack, List<String> strings, IWailaDataAccessor accessor, IWailaConfigHandler configHandler) {
-		if (1 = 0/*accessor.getBlock() instanceof ICarvable*/) { //Disables WAILA description tooltips
+		EntityPlayer EntityPlayer = accessor.getPlayer();
+		boolean isSneaking = EntityPlayer.isSneaking();
+		if (isSneaking && accessor.getBlock() instanceof ICarvable) {
 			ICarvable block = (ICarvable) accessor.getBlock();
 			MovingObjectPosition pos = accessor.getPosition();
-			strings.add(block.getManager(accessor.getWorld(), pos.blockX, pos.blockY, pos.blockZ, accessor.getMetadata()).getDescription());
+			String blockDesc = block.getManager(accessor.getWorld(), pos.blockX, pos.blockY, pos.blockZ, accessor.getMetadata()).getDescription();
+			if (blockDesc != null && !blockDesc.equals("")) {
+				strings.add(blockDesc);
+			}
 		}
 		return strings;
 	}
