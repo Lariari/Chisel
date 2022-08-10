@@ -1126,7 +1126,7 @@ public enum Features {
 
 			BlockCarvable hexLargePlating = (BlockCarvable) new BlockCarvableGlow("animations/archetype2").setCreativeTab(ChiselTabs.tabMetalChiselBlocks).setHardness(2).setResistance(12);
 			for (int i = 0; i < 16; i++) {
-				hexLargePlating.carverHelper.addVariation("tile.hexPlating." + ItemDye.field_150921_b[i] + ".desc", i, "hexPlating/hexNew", (i + 20));
+				hexLargePlating.carverHelper.addVariation("tile.hexLargePlating." + ItemDye.field_150921_b[i] + ".desc", i, "hexPlating/hexNew", (i + 20));
 			}
 
 			hexLargePlating.carverHelper.registerBlock(hexLargePlating, "hexLargePlating");
@@ -1978,9 +1978,26 @@ public enum Features {
 		@Override
 		void addBlocks() {
 			BlockPresent present = (BlockPresent) new BlockPresent().setCreativeTab(ChiselTabs.tabOtherChiselBlocks).setHardness(2.0F).setResistance(10.0F).setBlockName("chisel.present");
-			for (int i = 0; i < 16; i++) {
-				present.carverHelper.addVariation("tile.chisel.present.desc", i, "planks_oak", "minecraft");
-			}
+			//for (int i = 0; i < 16; i++) {
+			//	present.carverHelper.addVariation("tile.chisel.present.desc", i, "planks_oak", "minecraft");
+			//}
+			present.carverHelper.addVariation("tile.chisel.present.0.desc", 0, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.1.desc", 1, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.2.desc", 2, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.3.desc", 3, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.4.desc", 4, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.5.desc", 5, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.6.desc", 6, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.7.desc", 7, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.8.desc", 8, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.9.desc", 9, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.10.desc", 10, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.11.desc", 11, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.12.desc", 12, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.13.desc", 13, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.14.desc", 14, "planks_oak", "minecraft");
+			present.carverHelper.addVariation("tile.chisel.present.15.desc", 15, "planks_oak", "minecraft");
+			
 			present.carverHelper.registerAll(present, "present", ItemBlockPresent.class);
 			Carving.chisel.registerOre("present", "chest");
 		}
@@ -2278,22 +2295,22 @@ public enum Features {
 			sandstone2.carverHelper.registerVariations("sandstone");
 
 			BlockCarvable sandstone_scribbles = (BlockCarvable) new BlockCarvable(Material.rock).setCreativeTab(ChiselTabs.tabStoneChiselBlocks).setStepSound(Block.soundTypeStone).setHardness(0.8F);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 0, "sandstone-scribbles/scribbles-0", 36);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 1, "sandstone-scribbles/scribbles-1", 37);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 2, "sandstone-scribbles/scribbles-2", 38);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 3, "sandstone-scribbles/scribbles-3", 39);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 4, "sandstone-scribbles/scribbles-4", 40);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 5, "sandstone-scribbles/scribbles-5", 41);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 6, "sandstone-scribbles/scribbles-6", 42);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 7, "sandstone-scribbles/scribbles-7", 43);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 8, "sandstone-scribbles/scribbles-8", 44);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 9, "sandstone-scribbles/scribbles-9", 45);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 10, "sandstone-scribbles/scribbles-10", 46);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 11, "sandstone-scribbles/scribbles-11", 47);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 12, "sandstone-scribbles/scribbles-12", 48);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 13, "sandstone-scribbles/scribbles-13", 49);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 14, "sandstone-scribbles/scribbles-14", 50);
-			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.desc", 15, "sandstone-scribbles/scribbles-15", 51);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.0.desc", 0, "sandstone-scribbles/scribbles-0", 36);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.1.desc", 1, "sandstone-scribbles/scribbles-1", 37);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.2.desc", 2, "sandstone-scribbles/scribbles-2", 38);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.3.desc", 3, "sandstone-scribbles/scribbles-3", 39);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.4.desc", 4, "sandstone-scribbles/scribbles-4", 40);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.5.desc", 5, "sandstone-scribbles/scribbles-5", 41);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.6.desc", 6, "sandstone-scribbles/scribbles-6", 42);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.7.desc", 7, "sandstone-scribbles/scribbles-7", 43);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.8.desc", 8, "sandstone-scribbles/scribbles-8", 44);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.9.desc", 9, "sandstone-scribbles/scribbles-9", 45);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.10.desc", 10, "sandstone-scribbles/scribbles-10", 46);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.11.desc", 11, "sandstone-scribbles/scribbles-11", 47);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.12.desc", 12, "sandstone-scribbles/scribbles-12", 48);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.13.desc", 13, "sandstone-scribbles/scribbles-13", 49);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.14.desc", 14, "sandstone-scribbles/scribbles-14", 50);
+			sandstone_scribbles.carverHelper.addVariation("tile.sandstoneScribbles.15.desc", 15, "sandstone-scribbles/scribbles-15", 51);
 			sandstone_scribbles.carverHelper.registerBlock(sandstone_scribbles, "sandstone_scribbles");
 			sandstone_scribbles.carverHelper.registerVariations("sandstone");
 
@@ -2488,11 +2505,11 @@ public enum Features {
 			technical.carverHelper.addVariation("tile.technical.15.desc", 15, "technical/grateRusty");
 			technical.carverHelper.registerAll(technical, "technical");
 
-			BlockCarvableGlass technical2 = (BlockCarvableGlass) new BlockCarvableGlass().setHardness(2.0F).setResistance(10F);
+			BlockCarvableClear technical2 = (BlockCarvableClear) new BlockCarvableClear().setHardness(2.0F).setResistance(10F);
 			technical2.carverHelper.addVariation("tile.technical.0.desc", 0, "technical/scaffoldTransparent", 20);
 			technical2.carverHelper.addVariation("tile.technical.4.desc", 1, "technical/fanFastTransparent", 21);
 			technical2.carverHelper.addVariation("tile.technical.6.desc", 2, "technical/fanStillTransparent", 22);
-			technical2.carverHelper.addVariation("tile.technical.14.desc", 3, "technical/fanStillTransparent", 23);
+			//technical2.carverHelper.addVariation("tile.technical.14.desc", 3, "technical/fanSparking", 23);
 			technical2.carverHelper.registerBlock(technical2, "technical2");
 			technical2.carverHelper.registerVariations("technical");
 
@@ -2512,6 +2529,7 @@ public enum Features {
 			technical4.carverHelper.addVariation("tile.technical4.5.desc", 5, "technical/new/MakeshiftPanels");
 			technical4.carverHelper.addVariation("tile.technical4.6.desc", 6, "technical/new/Piping");
             technical4.carverHelper.addVariation("tile.technical4.7.desc", 7, "technical/new/concrete/concreteBlocks" , new SubmapManagerCombinedCTM(9, "technical/new/concrete/concreteBlocks", TextureType.R9));
+            technical4.carverHelper.addVariation("tile.technical4.8.desc", 8, "technical/fanSparking", 23);
             // The animation is malfunctioning. :(
 			// technical4.carverHelper.addVariation("tile.technical4.7.desc", 7, "technical/new/TapeDrive");
 			technical4.carverHelper.registerBlock(technical4, "technical4");
@@ -2750,7 +2768,7 @@ public enum Features {
 
 		@Override
 		void addBlocks() {
-			BlockCarvable valentines = (BlockCarvable) new BlockCarvable(Material.wood).setStepSound(Block.soundTypeStone).setCreativeTab(ChiselTabs.tabOtherChiselBlocks).setHardness(2F)
+			BlockCarvable valentines = (BlockCarvable) new BlockCarvable(Material.rock).setStepSound(Block.soundTypeStone).setCreativeTab(ChiselTabs.tabOtherChiselBlocks).setHardness(2F)
 					.setResistance(10F);
 			valentines.carverHelper.addVariation("tile.valentines.0.desc", 0, "valentines/1");
 			valentines.carverHelper.addVariation("tile.valentines.1.desc", 1, "valentines/companion");
@@ -2943,7 +2961,7 @@ public enum Features {
 			for (int i = 0; i < 16; i++)
 				woolen_clay.carverHelper.addVariation("tile.woolenClay." + i + ".desc", i, "woolenClay/" + sGNames[i].replaceAll(" ", "").toLowerCase());
 			woolen_clay.carverHelper.registerAll(woolen_clay, "woolen_clay");
-
+			woolen_clay.setHarvestLevel("pickaxe", 0);
 			Carving.chisel.registerOre("woolen_clay", "woolen_clay");
 		}
 
